@@ -17,6 +17,28 @@ A public-facing Application Load Balancer routes client traffic to EC2 instances
 
 ---
 
+## AWS Services Used
+
+* Amazon EC2
+* Application Load Balancer (ALB)
+* Auto Scaling Groups (ASG)
+* Amazon VPC
+* Subnets (Public & Private)
+* Internet Gateway (IGW)
+* NAT Gateway
+* Route Tables
+* Security Groups
+* Amazon S3
+* IAM Roles & Policies
+* Amazon RDS (Aurora MySQL – Multi-AZ)
+* Amazon Route 53
+* Amazon CloudWatch
+* Amazon SNS
+* AWS CloudTrail
+* VPC Flow Logs
+
+---
+
 ## Algorithm
 
 ### AWS PROJECT
@@ -115,7 +137,7 @@ A public-facing Application Load Balancer routes client traffic to EC2 instances
 
 ## Outcome
 
-This project demonstrates the ability to design, deploy, monitor, and clean up a secure, scalable, and highly available three-tier web architecture on AWS, suitable for real-world production environments and cloud engineering portfolios.
+This project demonstrates the ability to design, deploy, monitor, and clean up a secure, scalable, and highly available three-tier web architecture on AWS, suitable for real-world production environments and cloud engineering.
 
 ---
 
