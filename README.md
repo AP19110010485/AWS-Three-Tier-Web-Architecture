@@ -13,8 +13,27 @@ This project demonstrates a hands-on implementation of a three-tier web architec
 
 ## Architecture Overview
 
-A public-facing Application Load Balancer routes client traffic to EC2 instances in the web tier. The web tier runs Nginx servers that host a React.js frontend and forward API requests to an internal-facing Application Load Balancer. The internal load balancer routes traffic to a Node.js-based application tier, which interacts with an Amazon Aurora MySQL Multi-AZ database. Load balancing, health checks, and auto scaling are implemented at each tier to ensure availability.
+The architecture is composed of three layers: Web Tier, Application Tier, and Database Tier.
 
+Client requests are handled by a public-facing Application Load Balancer (ALB), which distributes traffic across EC2 instances in the web tier to maintain availability and performance.
+
+The web tier runs Nginx web servers configured to:
+
+Serve a React.js front-end application
+
+Forward API requests to an internal-facing Application Load Balancer
+
+The internal load balancer routes API traffic to the application tier, which hosts a Node.js backend application. This tier is isolated from public access and is responsible for processing business logic.
+
+The application tier communicates with an Amazon Aurora MySQL database, deployed in a Multi-AZ configuration to provide high availability, durability, and data consistency.
+
+To ensure reliability and scalability:
+
+Auto Scaling Groups are implemented for both the web and application tiers
+
+Load balancing and health checks are configured at each layer to automatically manage instance health and traffic distribution
+
+This project follows AWS best practices for building a secure, scalable, and highly available cloud-based web application.
 ---
 
 ## AWS Services Used
